@@ -13,7 +13,7 @@ class MementosController < ApplicationController
       timer = 0
      begin
        timer += 1;
-       @memento = Memento.find_by_id(rand(Memento.last.id));
+       @memento = Memento.find_by_id(rand(Memento.last.id + 1));
      end while @memento.nil? and timer < 10
     end
     if(@memento.nil?)
