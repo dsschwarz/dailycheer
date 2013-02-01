@@ -1,0 +1,12 @@
+
+<div class = "center" id = "signin">
+		<%= form_for(@memento) do |f| %>
+		<div class = "field">
+	      	<%= f.text_field :body, :placeholder => "Insert happy note:"  %>
+	      	<br>
+	      	<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+	      	<br>
+	    </div>
+	    <% end %>
+      </div>
+      <a href="/"></a>
