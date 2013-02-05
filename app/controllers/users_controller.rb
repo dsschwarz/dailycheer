@@ -1,15 +1,15 @@
 class UsersController < ApplicationController
 def new
-    #if signed_in?
-     # redirect_to
-    #end
+    if signed_in?
+    	redirect_to '/home'
+    end
     @user = User.new
   end
 
   def reset 
-    #if signed_in?
-    #redirect_to
-  #end
+  if signed_in?
+    redirect_to '/home'
+  end
   @user = User.find_by_email(params[:email])
 end
 
@@ -20,9 +20,8 @@ end
       sign_in @user
      #UserMailer.welcome_email(@user).deliver
       redirect_to "/home"
-    else
-      
-      #render 'new'
+    else    
+      render 'new'
     end
   end
 end

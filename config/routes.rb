@@ -3,6 +3,8 @@ Happy::Application.routes.draw do
 
   resource :mementos
   resource :users
+  resource :sessions
+
   match '/home', to: 'mementos#show'
   match '/add', to: 'mementos#new'
   
