@@ -1,7 +1,12 @@
 Happy::Application.routes.draw do
+
+
   resource :mementos
-  match '/', to: 'mementos#show'
+  resource :users
+  match '/home', to: 'mementos#show'
   match '/add', to: 'mementos#new'
+  
+  root to: 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
