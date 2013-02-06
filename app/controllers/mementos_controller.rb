@@ -19,8 +19,8 @@ class MementosController < ApplicationController
        memento_array = []
        memento_array = Memento.find_all_by_user_name(current_user.name);
        size = memento_array.length
-       rand = rand(0..size)
-       @memento = memento_array[rand]
+       randnum = rand(0..size)
+       @memento = memento_array[randnum]
 
      end while @memento.nil? and timer < 10
     end
