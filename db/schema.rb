@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130205205419) do
+ActiveRecord::Schema.define(:version => 20130206183528) do
 
   create_table "memento", :force => true do |t|
     t.string   "body"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20130205205419) do
     t.string   "body"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "user_name"
   end
 
   create_table "sessions", :force => true do |t|

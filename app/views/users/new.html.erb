@@ -1,7 +1,8 @@
-<% provide(:title, "Sign Up") %>
+<% provide(:title, "Random Mementos") %>
 <body>
 
 <table class="table">
+
   <div class = "memento">
     <%= render @memento  %>
       <img src='./../assets/note.png' width='20%' height='20%'/>
@@ -12,9 +13,6 @@
   </div>
 
    <div id = "signup">
-    <br>
-    <br>
-    <br>
     <%= form_for(@user) do |f| %>
     <div class = "field">
     	<%= render 'shared/error_messages' %>

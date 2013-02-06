@@ -4,7 +4,9 @@ class MementosController < ApplicationController
     @memento = Memento.new
   end
   def create
+
     @memento = Memento.new(params[:memento])
+    @memento.user_name = current_user.name
     @memento.save
     redirect_to '/'
   end
@@ -14,7 +16,12 @@ class MementosController < ApplicationController
       timer = 0
      begin
        timer += 1;
-       @memento = Memento.find_by_id(rand(Memento.last.id + 1));
+       memento_array = []
+       memento_array = Memento.find_all_by_user_name(current_user.name);
+       size = memento_array.length
+       rand = rand(0..size)
+       @memento = memento_array[rand]
+
      end while @memento.nil? and timer < 10
     end
     if(@memento.nil?)
