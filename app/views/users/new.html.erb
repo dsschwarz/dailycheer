@@ -1,4 +1,4 @@
-<% provide(:title, "Random Mementos") %>
+<% provide(:title, "Sign Up") %>
 <body>
 
 <table class="table">
@@ -15,7 +15,7 @@
    <div id = "signup">
     <%= form_for(@user) do |f| %>
     <div class = "field">
-    	<%= render 'shared/error_messages' %>
+    	<%= render 'Shared/error_messages' %>
       <%= f.text_field :name, :placeholder => "User Name" %>
       <br>
       <%= f.text_field :email, :placeholder => "Your Email"%>
