@@ -1,5 +1,59 @@
 @import "bootstrap";
 
+form { 
+  width: 100%; 
+  float: right; 
+  text-align: center; 
+  padding: 2%;
+
+}
+.memento {
+  width: 50%;
+  height: 100%;
+  float: left; 
+
+}
+#signup{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+#signup.field input {
+  width: 50%;
+  height: 110px;
+  font-size: 2.0em;
+  text-overflow: ellipsis;
+}
+
+#signup .field label {
+  font-size: 2.0em;
+}
+#signup .field button {
+  width: 51%;
+  height: 110px;
+  font-size: 2.0em;
+  text-overflow: ellipsis;
+}
+
+#signup .field select {
+  width: 52%;
+  height: 110px;
+  font-size: 2.0em;
+  text-overflow: ellipsis;
+}
+
+.center { 
+  text-align: center;
+}
+
+left { 
+padding: 10%;
+float: right; 
+width: 30%;
+text-align: center;
+}
+
 @import url(//fonts.googleapis.com/css?family=Ubuntu);
 /*!
  * Bootstrap v2.2.2
@@ -207,6 +261,7 @@ textarea {
   box-sizing: border-box;
 }
 body {
+  width: 980px;
   margin: 0;
   font-family: 'Ubuntu', Tahoma, sans-serif;
   font-size: 14px;

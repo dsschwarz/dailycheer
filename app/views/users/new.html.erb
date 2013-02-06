@@ -1,19 +1,38 @@
+<% provide(:title, "Sign Up") %>
+<body>
 
-  <div class = "center" id = "signin">
+<table class="table">
+  <div class = "memento">
+    <%= render @memento  %>
+      <img src='./../assets/note.png' width='20%' height='20%'/>
+      <span style = "display: inline; margin-top: 0px;">Want to add your own mementos? Sign Up!</span>
+      <a href="/">
+      <img src='./../assets/notepad.png' />
+    </a>
+  </div>
 
-  <%= form_for(@user) do |f| %>
+   <div id = "signup">
+    <br>
+    <br>
+    <br>
+    <%= form_for(@user) do |f| %>
     <div class = "field">
     	<%= render 'shared/error_messages' %>
-    
-      <%= f.text_field :email, :placeholder => "Insert Email Here"%>
+      <%= f.text_field :name, :placeholder => "User Name" %>
+      <br>
+      <%= f.text_field :email, :placeholder => "Your Email"%>
       <br>
       <%= f.password_field :password, :placeholder => "Password" %>
       <br>
       <%= f.password_field :password_confirmation, :placeholder => "Password Confirmation" %>
       <br>
-      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %></div>
-
+      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+    </div>
+    <span class = "note">Already Registered? <%= link_to "Sign In!", signin_path %></span>
+    <br>
+    <span class = "note">Forgot Password?</span>
     <% end %>
-</div>
-
+   
+ </div>
+</table>
 </body>

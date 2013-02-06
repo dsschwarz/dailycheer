@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-   if signed_in?
+   if !signed_in?
     redirect_to '/home'
    end
   end
@@ -15,10 +15,14 @@ class SessionsController < ApplicationController
       render 'new'
     end
   end
+
   def destroy
+  	logger.debug(self.current_user)
     self.current_user = nil
-    cookies.delete(:remember_token)
+    cookies.delete(:dailycheer_token)
+    logger.debug(self.current_user)
     redirect_to '/'
+
   end
 
 

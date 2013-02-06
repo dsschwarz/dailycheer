@@ -1,8 +1,8 @@
-
+<% provide(:title, "Add a Memento") %>
 <div class = "center" id = "signin">
 		<%= form_for(@memento) do |f| %>
 		<div class = "field">
-	      	<%= f.text_field :body, :placeholder => "Insert happy note:"  %>
+	      	<%= f.text_field :body, :placeholder => "Insert Memento Here"  %>
 	      	<br>
 	      	<%= f.submit "Submit", class: "btn btn-large btn-primary" %>
 	      	<br>

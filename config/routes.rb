@@ -5,10 +5,13 @@ Happy::Application.routes.draw do
   resource :users
   resource :sessions
 
+  root to: 'users#new'
+
   match '/home', to: 'mementos#show'
   match '/add', to: 'mementos#new'
-  
-  root to: 'users#new'
+  match '/signin',    to: 'sessions#new'
+  match '/signout',   to: 'sessions#destroy'
+ 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,4 +1,5 @@
 class MementosController < ApplicationController
+  before_filter :session_exists
   def new
     @memento = Memento.new
   end

@@ -1,6 +1,6 @@
 module SessionsHelper
 def sign_in(user)
-    cookies[:remember_token] = user.remember_token
+    cookies[:dailycheer_token] = user.remember_token
     self.current_user = user
   end
   def current_user=(user)
@@ -8,9 +8,10 @@ def sign_in(user)
   end
 
   def current_user
-    @current_user ||= User.find_by_remember_token(cookies[:remember_token])
+    @current_user ||= User.find_by_remember_token(cookies[:dailycheer_token])
   end
   def signed_in?
-    !self.current_user.nil?
+
+    self.current_user.nil?
   end
 end
