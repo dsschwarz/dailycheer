@@ -13,30 +13,29 @@ form {
   float: left; 
 
 }
+
+
 #signup{
   width: 50%;
   height: 100%;
   float: left;
 }
-
-#signup.field input {
-  width: 50%;
-  height: 110px;
-  font-size: 2.0em;
+.field input {
+  width: 250px;
   text-overflow: ellipsis;
 }
 
-#signup .field label {
+.field label {
   font-size: 2.0em;
 }
-#signup .field button {
+.field button {
   width: 51%;
   height: 110px;
   font-size: 2.0em;
   text-overflow: ellipsis;
 }
 
-#signup .field select {
+.field select {
   width: 52%;
   height: 110px;
   font-size: 2.0em;
@@ -260,8 +259,10 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+
 body {
-  width: 980px;
+  width: 100%;
   margin: 0;
   font-family: 'Ubuntu', Tahoma, sans-serif;
   font-size: 14px;

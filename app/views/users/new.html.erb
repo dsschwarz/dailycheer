@@ -1,18 +1,16 @@
 <% provide(:title, "Sign Up") %>
 <body>
 
-<table class="table">
-
-  <div class = "memento">
-    <%= render @memento  %>
-      <img src='./../assets/note.png' width='20%' height='20%'/>
-      <span style = "display: inline; margin-top: 0px;">Want to add your own mementos? Sign Up!</span>
-      <a href="/">
-      <img src='./../assets/notepad.png' />
-    </a>
-  </div>
-
-   <div id = "signup">
+<table class="table" style = "float: left; width: 1200px;" border = "0">
+<td>
+    <h2 style = "padding-left: 10px;"> 
+      Daily Cheer allows you to recollect cheerful memories with friends and family
+      <br>
+      Sign up today or login with Facebook, Twitter or Gmail
+    </h2>
+  
+</td>
+<td style = "float: left;">
     <%= form_for(@user) do |f| %>
     <div class = "field">
     	<%= render 'Shared/error_messages' %>
@@ -30,7 +28,6 @@
     <br>
     <span class = "note">Forgot Password?</span>
     <% end %>
-   
- </div>
+</td>
 </table>
 </body>

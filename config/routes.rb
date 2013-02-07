@@ -4,6 +4,7 @@ Happy::Application.routes.draw do
   resource :mementos
   resource :users
   resource :sessions
+  resource :passwordchange
 
   root to: 'users#new'
 
@@ -11,6 +12,8 @@ Happy::Application.routes.draw do
   match '/add', to: 'mementos#new'
   match '/signin',    to: 'sessions#new'
   match '/signout',   to: 'sessions#destroy'
+  match '/changepw', to: 'passwordchange#changepw'
+  match '/change',    to: 'passwordchange#change'
  
 
   # The priority is based upon order of creation:
