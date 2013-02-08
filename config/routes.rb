@@ -14,7 +14,7 @@ Happy::Application.routes.draw do
   match '/signout',   to: 'sessions#destroy'
   match '/changepw', to: 'passwordchange#changepw'
   match '/change',    to: 'passwordchange#change'
- 
+  match '/mypage', to: 'users#page'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

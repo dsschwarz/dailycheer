@@ -50,6 +50,8 @@ end
     if !signed_in?
       @memento = Memento.find_all_by_user_name(current_user.name);
     end
+  end
+end
 
-    
+
 
