@@ -6,10 +6,15 @@ class MementosController < ApplicationController
   def create
 
     @memento = Memento.new(params[:memento])
+    if @memento.body == ""
+      flash[:notice] = "Error: There was no content in your note" 
+      redirect_to add_path
+    else
     @memento.user_name = current_user.name
     @memento.save
     redirect_to '/'
   end
+end
   def show
     @memento = Memento.new(body: "Someone died a few seconds ago - it wasn't you :)")
     if(!Memento.last.nil?)
@@ -29,6 +34,5 @@ class MementosController < ApplicationController
     if(@memento.nil?)
       @memento = Memento.new(body: "Someone died a few seconds ago - it wasn't you :)")
     end
-    
   end
 end
